@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   Card,
   CardContent,
@@ -10,21 +10,59 @@ import {
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import axios from 'axios'
+import { exerciseOptions } from '@/utils/getData'
+import Link from 'next/link'
+import ExerciseCard from './exerciseCard'
+
+export interface Exercise {
+  bodyPart: string;
+  equipment: string;
+  gifUrl: string;
+  id: string;
+  name: string;
+  target: string;
+  secondaryMuscles: string[];
+  instructions: string[];
+}
 
 const SearchExercise = () => {
+  const [ search, setSearch ] = useState("");
+  const [ exercises, setExercises ] = useState<Exercise[]>([]);
+  const [ bodyParts, setBodyParts ] = useState([]);
 
-  const [ searching, setSearching] = useState("");
+  /*
+  useEffect(() => {
+    const fetchExercisesData = async () => {
+      const bodyPartsData = await axios.get(
+        `https://exercisedb.p.rapidapi.com/exercises/bodyPartList`,
+        exerciseOptions
+      );
+      setBodyParts(['all', ...bodyPartsData.data.bodyPartList]);
+    }
+    fetchExercisesData();
+  }, [])
+  */
 
   const onSearch = async () => {
-    console.log("Search Called", searching)
-    try{
-      const response = await axios.post('api/get-exercise/', searching)
-      console.log("Successful Search", response)
-    } catch(error:any){
-      console.log("Search Has Failed!", error)
+    if(search){
+      const exercisesData = await axios.get(
+        `https://exercisedb.p.rapidapi.com/exercises`,
+        exerciseOptions
+      );
+
+      const searchedExercises = exercisesData.data.filter(
+        (exercise: Exercise) => exercise.name.toLowerCase().includes(search)
+        || exercise.target.toLowerCase().includes(search)
+        || exercise.equipment.toLowerCase().includes(search)
+        || exercise.bodyPart.toLowerCase().includes(search)
+      );
+    setSearch("");
+    setExercises(searchedExercises);
+    console.log(searchedExercises);
     }
   }
 
+   
   return (
     <section className='my-4 text-center flex flex-col'>
       <h1 className='text-center text-4xl font-extrabold mb-4'>Awesome Exercises You Should Know</h1>
@@ -33,23 +71,18 @@ const SearchExercise = () => {
         <Input 
           type="text" 
           placeholder="Search for exercises...." 
-          value={searching}
-          onChange={(e) => setSearching(e.target.value) }
+          value={search}
+          onChange={(e) => setSearch(e.target.value) }
           />
         <Button type="button" variant='default' onClick={onSearch}>Search</Button>
       </div>
 
-      <div className='mt-4'>
-        <Card>
-          <CardHeader>
-            <CardTitle>Card Title</CardTitle>
-            <CardDescription>Card Description</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p>Card Content</p>
-          </CardContent>
-        </Card>
-
+      <div className='mt-4 grid grid-cols-2 gap-8 mx-8 hover:shadow-l'>
+      {exercises.map((exercise) => (
+        <Link href={`/exercise/${exercise.id}`} key={exercise.id}>
+          <ExerciseCard exercise={exercise} />
+        </Link>
+        ))}
       </div>
     </section>
   )
