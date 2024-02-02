@@ -1,39 +1,69 @@
+import { Dumbbell } from "lucide-react";
 import Link from "next/link";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa6";
+import { Button } from "./ui/button";
 
 export default function Footer(){
   return(
-    <footer>
-      <div className="flex md:grid-cols-4 sm:grid-cols-2 mt-12 justify-between px-16">
+    <footer className="relative border-t-2">
+      <div className="flex md:grid-cols-4 sm:grid-cols-2 mt-8 justify-between px-16">
+        <div className="flex flex-col">
+          <Link href="/" className="flex gap-2 text-orange-400 font-bold text-xl">
+            <Dumbbell />
+            <span>Fitness Nepal</span>
+          </Link>
+          <p className="mb-2">Your Partner in Health and Wellness</p>
+          <div className='gap-2 flex  mb-4'>
+              <a href="https://github.com/bibekgurung9" target='blank'>
+                <Button variant='outline' className='md:text-xl' id='fitness'>
+                  <FaGithub />
+                </Button>
+              </a>
+              <a href="https://www.linkedin.com/in/bibekgurung9/" target='blank'>
+                <Button variant='outline' className='md:text-xl' id='cardio'>
+                  <FaLinkedin />
+                </Button>
+              </a>
+              <a href="https://twitter.com/_BibekGurung" target='blank'>
+                <Button variant='outline' className='d:text-xl' id='diet'>
+                  <FaTwitter />
+                </Button>
+              </a>
+          </div>
+
         <div>
-          Col 1
+          <h4 className="text-lg font-bold mb-2">Contact Us</h4>
+          <p><span className="font-bold text-orange-500">Email:</span> info@fitnessnepal.com</p>
+          <p><span className="font-bold text-orange-500">Phone:</span> +1 (123) 456-7890</p>
         </div>
-        <div className="flex flex-col items-center">
-          <h2>Navigation</h2>
+
+        </div>
+
+        <div className="flex flex-col">
+          <h2 className="text-orange-500 font-bold">Navigation</h2>
           <ul className="">
-            <Link href={'/#'}><li>Home</li></Link>
-            <Link href={'/#'}><li>Home</li></Link>
-            <Link href={'/#'}><li>Home</li></Link>
-            <Link href={'/#'}><li>Home</li></Link>
+            <Link href={'/home'}><li>Home</li></Link>
+            <Link href={'/about'}><li>About</li></Link>
+            <Link href={'/contact'}><li>Contact</li></Link>
+            <Link href={'/enroll'}><li>Enroll</li></Link>
           </ul>
         </div>
 
-        <div className="flex flex-col items-center">
-          <h2>Quick Links</h2>
+        <div className="flex flex-col">
+          <h2 className="text-orange-500 font-bold">Quick Links</h2>
           <ul className="">
-            <Link href={'/#'}><li>Home</li></Link>
-            <Link href={'/#'}><li>Home</li></Link>
-            <Link href={'/#'}><li>Home</li></Link>
-            <Link href={'/#'}><li>Home</li></Link>
+            <Link href={'/#'}><li>Terms & Conditions</li></Link>
+            <Link href={'/#'}><li>License</li></Link>
+            <Link href={'/#'}><li>Legal Policies</li></Link>
           </ul>
         </div>
 
-        <div className="flex flex-col items-center">
-          <h2>Contact Me</h2>
+        <div className="flex flex-col">
+          <h2 className="text-orange-500 font-bold">Contact Me</h2>
           <ul className="">
-            <Link href={'/#'}><li>Home</li></Link>
-            <Link href={'/#'}><li>Home</li></Link>
-            <Link href={'/#'}><li>Home</li></Link>
-            <Link href={'/#'}><li>Home</li></Link>
+            <a href='https://github.com/bibekgurung9' target='blank'><li>Github</li></a>
+            <a href='https://www.linkedin.com/in/bibekgurung9/' target='blank'><li>Linkedin</li></a>
+            <a href='https://twitter.com/_BibekGurung' target='blank'><li>Twitter</li></a>
           </ul>
         </div>
       </div>
