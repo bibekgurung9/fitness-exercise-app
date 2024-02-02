@@ -1,34 +1,27 @@
 export const navLinks = [
-  { label: 'Home', href: '/#'},
-  { label: 'Home', href: '/#'},
-  { label: 'Home', href: '/#'},
-  { label: 'Home', href: '/#'},
-  { label: 'Home', href: '/#'},
+  { label: 'Home', href: '/home'},
+  { label: 'Exercises', href: '/exercises'},
+  { label: 'Contact', href: '/contact'},
+  { label: 'Others', href: '/'},
 ]
 
-//hero section images & diets src
-import hero1 from '@/assets/images/1.jpg'
-import hero2 from '@/assets/images/2.jpg'
-import hero3 from '@/assets/images/3.jpg'
-import hero4 from '@/assets/images/4.jpg'
-import hero5 from '@/assets/images/5.jpg'
-
-export const heroImages = [
-  {src: hero1, alt: 'Image 1'},
-  {src: hero2, alt: 'Image 2'},
-  {src: hero3, alt: 'Image 3'},
-  {src: hero4, alt: 'Image 4'},
-  {src: hero5, alt: 'Image 5'},
-]
-
-import diet1 from '@/assets/diets/1.jpg'
-import diet2 from '@/assets/diets/2.jpg'
-import diet3 from '@/assets/diets/3.jpg'
-
-export const dietImages = [
-  {src: diet1, alt: 'Image 1'},
-  {src: diet2, alt: 'Image 2'},
-  {src: diet3, alt: 'Image 3'},
+export const chooseList = [
+  {
+    title: '✅ Expert Guidance',
+    description: `Our certified fitness trainers bring years of experience to guide you on your fitness journey.`,
+  },
+  {
+    title: '✅ Expert Guidance',
+    description: `Our certified fitness trainers bring years of experience to guide you on your fitness journey.`,
+  },
+  {
+    title: '✅ Expert Guidance',
+    description: `Our certified fitness trainers bring years of experience to guide you on your fitness journey.`,
+  },
+  {
+    title: '✅ Expert Guidance',
+    description: `Our certified fitness trainers bring years of experience to guide you on your fitness journey.`,
+  }
 ]
 
 //features list in feature section

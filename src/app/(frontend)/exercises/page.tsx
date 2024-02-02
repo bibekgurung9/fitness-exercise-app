@@ -1,8 +1,14 @@
 import React from 'react'
+import SearchExercise from '../_sections/search-exercises'
 
 const Exercise = () => {
   return (
-    <div>Exercise</div>
+    <div>
+      <h1>Exercise Banner</h1>
+      <div>
+        <SearchExercise />
+      </div>
+    </div>
   )
 }
 
