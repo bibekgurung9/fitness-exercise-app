@@ -37,6 +37,24 @@ const HeroSection = () => {
                 Diet Plans
               </Button>
             </div> 
+
+            <div className='flex px-16 gap-4 items-center justify-center mb-4'>
+              <a href="https://github.com/bibekgurung9" target='blank'>
+                <Button variant='outline' className='gap-x-2 md:text-4xl' id='fitness'>
+                  <FaGithub />
+                </Button>
+              </a>
+              <a href="https://github.com/bibekgurung9" target='blank'>
+                <Button variant='outline' className='gap-x-2 md:text-4xl' id='cardio'>
+                  <FaLinkedin />
+                </Button>
+              </a>
+              <a href="https://github.com/bibekgurung9" target='blank'>
+                <Button variant='outline' className='gap-x-2 md:text-4xl' id='diet'>
+                  <FaTwitter />
+                </Button>
+              </a>
+            </div>
         </div>
         <div className='hover:shadow-2xl'>
           <img 
@@ -46,24 +64,6 @@ const HeroSection = () => {
             />
         </div>
       </div>
-      <div className='flex px-16 gap-4 items-center justify-center mt-8'>
-        <a href="https://github.com/bibekgurung9" target='blank'>
-          <Button variant='outline' className='gap-x-2 md:text-4xl' id='fitness'>
-            <FaGithub />
-          </Button>
-        </a>
-        <a href="https://github.com/bibekgurung9" target='blank'>
-          <Button variant='outline' className='gap-x-2 md:text-4xl' id='cardio'>
-            <FaLinkedin />
-          </Button>
-        </a>
-        <a href="https://github.com/bibekgurung9" target='blank'>
-          <Button variant='outline' className='gap-x-2 md:text-4xl' id='diet'>
-            <FaTwitter />
-          </Button>
-        </a>
-      </div>
-
 
     </div>
   )
