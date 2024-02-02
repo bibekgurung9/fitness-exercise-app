@@ -1,12 +1,5 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import axios from 'axios'
@@ -28,22 +21,9 @@ export interface Exercise {
 const SearchExercise = () => {
   const [ search, setSearch ] = useState("");
   const [ exercises, setExercises ] = useState<Exercise[]>([]);
-  const [ bodyParts, setBodyParts ] = useState([]);
 
-  /*
-  useEffect(() => {
-    const fetchExercisesData = async () => {
-      const bodyPartsData = await axios.get(
-        `https://exercisedb.p.rapidapi.com/exercises/bodyPartList`,
-        exerciseOptions
-      );
-      setBodyParts(['all', ...bodyPartsData.data.bodyPartList]);
-    }
-    fetchExercisesData();
-  }, [])
-  */
-
-  const onSearch = async () => {
+  const onSearch = async (e:any) => {
+    e.preventDefault();
     if(search){
       const exercisesData = await axios.get(
         `https://exercisedb.p.rapidapi.com/exercises`,
@@ -61,25 +41,29 @@ const SearchExercise = () => {
     console.log(searchedExercises);
     }
   }
+  const handleKeyDown =  (e:any) => {
+    if(e.key === 'Enter' && !e.shiftkey){
+      e.preventDefault();
+      onSearch(e);
+    }
+  };
 
-   
   return (
     <section className='my-4 text-center flex flex-col'>
-      <h1 className='text-center text-4xl font-extrabold mb-4'>Awesome Exercises You Should Know</h1>
-
-      <div className="flex w-full items-center justify-center px-16 gap-2">
+      <div className="flex w-full items-center justify-center px-16 gap-8 mb-6">
         <Input 
           type="text" 
           placeholder="Search for exercises...." 
           value={search}
           onChange={(e) => setSearch(e.target.value) }
+          onKeyDown={handleKeyDown}
           />
-        <Button type="button" variant='default' onClick={onSearch}>Search</Button>
+        <Button type="button" variant='tag3' onClick={onSearch}>Search</Button>
       </div>
 
-      <div className='mt-4 grid grid-cols-2 gap-8 mx-8 hover:shadow-l'>
+      <div className='mt-4 grid md:grid-cols-3 gap-8 mx-8 hover:shadow-l'>
       {exercises.map((exercise) => (
-        <Link href={`/exercise/${exercise.id}`} key={exercise.id}>
+        <Link href={``} key={exercise.id}>
           <ExerciseCard exercise={exercise} />
         </Link>
         ))}
