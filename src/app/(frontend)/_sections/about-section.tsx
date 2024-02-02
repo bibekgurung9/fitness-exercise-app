@@ -59,7 +59,7 @@ const HeroSection = () => {
       </div>
 
       <div className='flex flex-col mt-4 p-4'>
-        <h1 className='text-3xl font-extrabold mt-4 mb-4'>What Sets Us Apart: </h1>
+        <h1 className='text-3xl font-extrabold mt-4 mb-4'>What We Believe In: </h1>
         <ul className='text-xl flex flex-col justify-start gap-y-2'>
           <li><span className='font-bold'>Supportive Community:</span> oin our community of like-minded individuals who share a commitment to health and fitness. Connect with others, share your progress, and find inspiration in the journey of fellow members.</li>
           <li><span className='font-bold'>Continuous Learning:</span> We stay abreast of the latest fitness trends, research, and best practices to ensure our programs evolve with the ever-changing landscape of health and wellness.</li>
