@@ -1,11 +1,8 @@
 import React from 'react'
-import HeroSection from '../_sections/hero-section'
-import FeatureSection from '../_sections/features-section'
-import SearchExercise from '../_sections/search-exercises'
 import ContactUs from '../_sections/contact-us'
 import { Toaster } from 'react-hot-toast'
 
-const HomePage = () => {
+const ContactPage = () => {
   return (
     <div>
       <Toaster />
@@ -14,4 +11,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+export default ContactPage
