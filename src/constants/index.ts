@@ -3,7 +3,7 @@ export const navLinks = [
   { label: 'Exercises', href: '/exercises'},
   { label: 'About', href: '/about'},
   { label: 'Contact', href: '/contact'},
-  { label: 'Others', href: '/'},
+  { label: 'Enroll Now', href: '/enroll'},
 ]
 
 export const chooseList = [
@@ -64,3 +64,23 @@ export const featureList = [
 
   */
 ];
+
+export const availablePrograms = [
+  { name: 'Full Body'},
+  { name: 'Upper Body'},
+  { name: 'Lower Body'},
+  { name: 'Back and Shoulders'},
+  { name: 'Legs'},
+  { name: 'Abs and Core'},
+  { name: 'Cardio'},
+]
+
+export const exercisePlans = [
+  { time: '3 Months'},
+  { time: '6 Months'},
+  { time: '12 Months'},
+  { time: '18 Months'},
+  { time: '24 Months'},
+]
+
+
