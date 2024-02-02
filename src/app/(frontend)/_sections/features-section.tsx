@@ -7,8 +7,6 @@ import {
 } from "@/components/ui/card"
 import { featureList } from '@/constants'
 
-
-
 const FeatureSection = () => {
   return (
     <section>

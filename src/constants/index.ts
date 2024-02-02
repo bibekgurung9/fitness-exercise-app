@@ -27,20 +27,12 @@ export const chooseList = [
 //features list in feature section
 export const featureList = [
   {
-    title: 'Customized Workouts',
-    description: 'Get personalized workout plans tailored to your fitness goals and preferences.'
+    title: 'Amazing Workouts',
+    description: 'Get personalized workout plans tailored to your fitness goals and searches.'
   },
   {
-    title: 'Nutrition Tracking',
-    description: 'Monitor your daily food intake and track your nutritional habits for a healthier lifestyle.'
-  },
-  {
-    title: 'Progress Tracking',
-    description: 'Track your fitness journey with detailed statistics and progress reports to stay motivated.'
-  },
-  {
-    title: 'Live Classes',
-    description: 'Join live workout sessions conducted by fitness experts to stay engaged and motivated.'
+    title: 'Detailed Descriptions',
+    description: 'Join workout sessions conducted by fitness experts to stay engaged and motivated.'
   },
   {
     title: 'Community Support',
@@ -51,11 +43,23 @@ export const featureList = [
     description: 'Access a library of workout videos and tutorials to ensure proper form and technique.'
   },
   {
-    title: 'Challenges and Competitions',
-    description: 'Participate in fitness challenges and competitions to spice up your workout routine.'
+    title: 'Challenges and Rewards',
+    description: 'Take on fitness challenges, earn rewards, and stay motivated on your fitness path.'
   },
   {
     title: 'Guided Meditation',
     description: 'Incorporate guided meditation sessions for a holistic approach to health and well-being.'
   },
+
+  /*
+    {
+    title: 'Nutrition Tracking',
+    description: 'Monitor your daily food intake and track your nutritional habits for a healthier lifestyle.'
+  },
+  {
+    title: 'Progress Tracking',
+    description: 'Track your fitness journey with detailed statistics and progress reports to stay motivated.'
+  },
+
+  */
 ];
