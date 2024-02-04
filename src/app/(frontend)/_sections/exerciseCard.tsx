@@ -3,18 +3,8 @@ import React from 'react'
 
 import {
   Card,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card"
-import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from "@/components/ui/pagination"
+
 
 import { Exercise } from './search-exercises';
 import { Button } from '@/components/ui/button';
