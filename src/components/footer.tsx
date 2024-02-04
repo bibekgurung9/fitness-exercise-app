@@ -5,15 +5,15 @@ import { Button } from "./ui/button";
 
 export default function Footer(){
   return(
-    <footer className="relative border-t-2">
-      <div className="flex md:grid-cols-4 sm:grid-cols-2 mt-8 justify-between px-16">
-        <div className="flex flex-col">
+    <footer className="relative">
+      <div className="flex xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 mt-8 justify-between px-16">
+        <div className="flex flex-col mx-2">
           <Link href="/" className="flex gap-2 text-orange-400 font-bold text-xl">
             <Dumbbell />
             <span>Fitness Nepal</span>
           </Link>
           <p className="mb-2">Your Partner in Health and Wellness</p>
-          <div className='gap-2 flex  mb-4'>
+          <div className='gap-2 flex mb-4'>
               <a href="https://github.com/bibekgurung9" target='blank'>
                 <Button variant='outline' className='md:text-xl' id='fitness'>
                   <FaGithub />
@@ -39,7 +39,7 @@ export default function Footer(){
 
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col mx-2">
           <h2 className="text-orange-500 font-bold">Navigation</h2>
           <ul className="">
             <Link href={'/home'}><li>Home</li></Link>
@@ -49,7 +49,7 @@ export default function Footer(){
           </ul>
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col mx-2">
           <h2 className="text-orange-500 font-bold">Quick Links</h2>
           <ul className="">
             <Link href={'/#'}><li>Terms & Conditions</li></Link>
@@ -58,7 +58,7 @@ export default function Footer(){
           </ul>
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col mx-2">
           <h2 className="text-orange-500 font-bold">Contact Me</h2>
           <ul className="">
             <a href='https://github.com/bibekgurung9' target='blank'><li>Github</li></a>
@@ -68,7 +68,7 @@ export default function Footer(){
         </div>
       </div>
       
-      <p className="text-center mt-4 text-xl">This Project Was Made My <a href="www.github.com/bibekgurung9" className="" target="blank">Bibek Gurung</a></p>
+      <p className="text-center mt-4 text-xl">This Project Was Made My <a href="www.github.com/bibekgurung9" className="text-orange-500 font-bold hover:text-orange-500/80" target="blank">Bibek Gurung</a></p>
     </footer>
   )
 }

@@ -83,4 +83,19 @@ export const exercisePlans = [
   { time: '24 Months'},
 ]
 
+import Abs from '@/assets/category/abs.svg'
+import Arms from '@/assets/category/arms.svg'
+import Chest from '@/assets/category/chest.svg'
+import Legs from '@/assets/category/abs.svg'
+import Cardio from '@/assets/category/cardio.svg'
+
+
+export const exerciseCategory = [
+  { title: 'Abs', img: Abs , alt:'Abs_Category_Picture', id: '1'},
+  { title: 'Arms', img: Arms, alt:'Arms_Category_Picture', id: '2'},
+  { title: 'Chest', img: Chest, alt:'Chest_Category_Picture', id: '3'},
+  { title: 'Legs', img: Legs, alt:'Legs_Category_Picture', id: '4'},
+  { title: 'Cardio', img: Cardio, alt:'Cardio_Category_Picture', id: '5'},
+]
+
 
