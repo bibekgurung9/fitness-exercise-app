@@ -3,22 +3,25 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { Menu } from "lucide-react";
 import { navLinks } from '@/constants';
 import Link from 'next/link';
+import { X } from 'lucide-react';
 
 const MobileNavbar = () => {
   return (
     <div className='md:hidden'>
       <Sheet>
-          <SheetTrigger className="md:hidden l:hidden xl:hidden pr-4 hover:opacity-75 transition"><Menu className='text-orange-500' /></SheetTrigger>
+          <SheetTrigger 
+            className="md:hidden l:hidden xl:hidden pr-4 hover:opacity-75 transition">
+            <Menu className='text-orange-500' />
+          </SheetTrigger>
           <SheetContent className='bg-slate-900'>
+            <SheetClose asChild >
+              <X className='text-xl bg-orange-500'  />
+            </SheetClose>
           {navLinks.map((links) => (
           <div className="py-2" key={links.label}>
             <Link href={links.href} className="flex text-xl text-orange-400 font-bold p-4 sm:p-2">

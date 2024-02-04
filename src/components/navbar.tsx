@@ -10,7 +10,7 @@ export default function Navbar(){
           <Dumbbell />
           <span>Fitness Nepal</span>
         </Link>
-      <div className="hidden md:flex">
+      <div className="hidden md:flex mr-4">
         {navLinks.map((links) => (
           <div className="py-2" key={links.label}>
             <Link href={links.href} className="flex text-xl text-orange-400 font-bold p-4 sm:p-2">
