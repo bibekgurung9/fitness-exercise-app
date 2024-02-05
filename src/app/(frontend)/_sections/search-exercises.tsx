@@ -1,11 +1,12 @@
 "use client"
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import axios from 'axios'
 import { exerciseOptions } from '@/utils/getData'
-import Link from 'next/link'
 import ExerciseCard from './exerciseCard'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 export interface Exercise {
   bodyPart: string;
@@ -63,8 +64,8 @@ const SearchExercise = () => {
 
       <div className='mt-4 grid md:grid-cols-3 gap-8 mx-8 hover:shadow-l'>
       {exercises.map((exercise) => (
-        <Link href={``} key={exercise.id}>
-          <ExerciseCard exercise={exercise} />
+        <Link key={exercise.id} href={`/exerciseDetails/${exercise.id}`}>
+            <ExerciseCard exercise={exercise} />
         </Link>
         ))}
       </div>
