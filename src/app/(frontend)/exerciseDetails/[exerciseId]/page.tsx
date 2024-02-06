@@ -2,8 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import ExerciseDetailPage from '../_components/exercise-details';
-import axios from 'axios';
-import { exerciseOptions } from '@/utils/getData';
+import axios, { AxiosResponse } from 'axios';
+import { exerciseOptions, youtubeOptions } from '@/utils/getData';
+import ExerciseVideos from '../_components/exercise-video';
 
 export interface ExerciseId {
   bodyPart: string;
@@ -18,7 +19,7 @@ export interface ExerciseId {
 
 const ExerciseId = () => {
   const [exerciseId, setExerciseId] = useState<ExerciseId | undefined>();
-
+  const [ exerciseVideos, setExerciseVideos] = useState([]);
   const params = useParams<{ exerciseId: string }>();
 
   useEffect(() => {
@@ -37,10 +38,17 @@ const ExerciseId = () => {
         } else {
           // Handle the case when the exercise with the given ID is not found
         }
+        // const youtubeSearchUrl = 'https://youtube-search-and-download.p.rapidapi.com'
+
+        // const exerciseVideosData : AxiosResponse<any>= await axios.get(`${youtubeSearchUrl}/search?q=${exerciseId?.name}`, youtubeOptions);
+
+        // const videos = exerciseVideosData.data;
+        // setExerciseVideos(videos);
+
       } catch (error) {
-        // Handle errors with the API request
         console.error('Error fetching exercise details:', error);
       }
+
     };
 
     fetchExerciseDetails();
@@ -49,6 +57,7 @@ const ExerciseId = () => {
   return (
     <div>
       {exerciseId && <ExerciseDetailPage exerciseId={exerciseId} />}
+      {/* {exerciseId && <ExerciseVideos exerciseVideos={exerciseVideos} exerciseName={exerciseId.name}  />} */}
     </div>
   );
 };
