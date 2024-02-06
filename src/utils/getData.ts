@@ -5,7 +5,7 @@ export const exerciseOptions = {
   params: {limit: '50'},
   headers: {
     'X-RapidAPI-Key': process.env.NEXT_PUBLIC_XRAPID_API_KEY,
-    'X-RapidAPI-Host': process.env.NEXT_PUBLIC_XRAPID_API_HOST,
+    'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com',
   }
 };
 
