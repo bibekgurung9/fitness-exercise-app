@@ -12,8 +12,8 @@ const FeatureSection = () => {
     <section>
       <h1 className='text-center text-4xl font-extrabold mb-4'>Our Features</h1>
       <div className='px-16 gap-4 items-center justify-center grid md:grid-cols-3 sm:grid-cols-2'>
-        {featureList.map((features) => (
-          <Card className='border-black hover:shadow-xl cursor-default h-full'>
+        {featureList.map((features, index) => (
+          <Card className='border-black hover:shadow-xl cursor-default h-full' key={index}>
             <CardHeader>
               <CardTitle className='text-center'>{features.title}</CardTitle>
               <CardDescription className='text-xl text-center'>{features.description}</CardDescription>

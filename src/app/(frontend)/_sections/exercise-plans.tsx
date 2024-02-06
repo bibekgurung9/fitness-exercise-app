@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { BiBulb } from 'react-icons/bi';
 import axios from 'axios';
 import { exerciseOptions } from '@/utils/getData';
+import Image from 'next/image';
 
 interface ExerciseCard {
   bodyPart: string;
@@ -42,7 +43,7 @@ const ExercisePlans = () => {
       }
     }
     onPlans();
-  }, [])
+  }, [plans])
 
   return (
     <div className='h-full grid sm:grid-cols-2 md:grid-cols-4 gap-x-6  items-center gap-y-6'>
@@ -50,7 +51,7 @@ const ExercisePlans = () => {
         <Card key={exercise.id} className='flex flex-col h-full hover:shadow-2xl'>
           <Button className='mx-2 mt-4' size='xs' variant='tag1'>{exercise.name.toUpperCase()}</Button>
           <Button className='mx-2 mt-4' size='xs' variant='tag2'>Targets: {exercise.bodyPart.toUpperCase()}</Button>
-          <img src={exercise.gifUrl} alt="" loading='lazy'/>
+          <Image src={exercise.gifUrl} alt="" loading='lazy'/>
           <Link href={`/exercise/${exercise.id}`}>
             <Button className='mx-2 mb-4 text-xl' variant='tag3'>
               <BiBulb />

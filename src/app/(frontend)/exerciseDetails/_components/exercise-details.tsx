@@ -1,6 +1,7 @@
 import React from 'react'
 import { ExerciseId } from '../[exerciseId]/page';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 interface ExerciseIdProps{
   exerciseId: ExerciseId;
@@ -32,7 +33,7 @@ const ExerciseDetailsPage = ({ exerciseId }: ExerciseIdProps) => {
       </section>
 
       <section className='flex items-center justify-center'>
-       <img src={exerciseId.gifUrl} alt="" />
+       <Image src={exerciseId.gifUrl} alt="" />
       </section>
     </div>
   )

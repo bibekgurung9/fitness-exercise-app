@@ -36,7 +36,7 @@ const HeroSection = () => {
         <div className='flex flex-col mt-4 p-4'>
           <h1 className='text-3xl font-extrabold mt-4 mb-4'>What Sets Us Apart: </h1>
           <ul className='text-xl flex flex-col justify-start gap-y-2'>
-            <li><span className='font-bold'>1. Personalized Approach:</span> We don't believe in one-size-fits-all solutions. Our programs are tailored to your individual fitness level, goals, and preferences.</li>
+            <li><span className='font-bold'>1. Personalized Approach:</span> We don&#39t believe in one-size-fits-all solutions. Our programs are tailored to your individual fitness level, goals, and preferences.</li>
             <li><span className='font-bold'>2. Expert Guidance:</span> Our team of certified trainers brings a wealth of experience to ensure you receive the best guidance on your fitness journey.</li>
             <li><span className='font-bold'>3. Comprehensive Wellness:</span> We focus not only on physical fitness but also on mental and emotional well-being. Our programs are designed to nourish your mind, body, and soul.</li>
           </ul>

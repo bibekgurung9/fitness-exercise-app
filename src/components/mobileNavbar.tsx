@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import {
   Sheet,
   SheetClose,
@@ -15,22 +16,23 @@ const MobileNavbar = () => {
     <div className='md:hidden'>
       <Sheet>
           <SheetTrigger 
-            className="md:hidden l:hidden xl:hidden pr-4 hover:opacity-75 transition">
+            className="md:hidden l:hidden xl:hidden hover:opacity-75 transition">
             <Menu className='text-orange-500' />
           </SheetTrigger>
-          <SheetContent className='bg-slate-900'>
+          <SheetContent className='bg-black flex flex-col items-end'>
             <SheetClose asChild >
               <X className='text-xl bg-orange-500'  />
             </SheetClose>
-          {navLinks.map((links) => (
-          <div className="py-2" key={links.label}>
-            <Link href={links.href} className="flex text-xl text-orange-400 font-bold p-4 sm:p-2">
-              {links.label}
-            </Link>
-          </div>
-        ))}
-          </SheetContent>
+            {navLinks.map((links) => (
+            <div key={links.label}>
+              <Link href={links.href} className="flex text-xl text-orange-400 font-bold p-4">
+                {links.label}
+              </Link>
+            </div>
+            ))}
+        </SheetContent>
         </Sheet>
+      Search
     </div>
   )
 }

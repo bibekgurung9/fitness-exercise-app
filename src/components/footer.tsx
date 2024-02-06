@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 
 export default function Footer(){
   return(
-    <footer className="relative">
+    <footer className="relative border-t-2 border-slate-300">
       <div className="flex xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 mt-8 justify-between px-16">
         <div className="flex flex-col mx-2">
           <Link href="/" className="flex gap-2 text-orange-400 font-bold text-xl">
@@ -46,6 +46,7 @@ export default function Footer(){
             <Link href={'/about'}><li>About</li></Link>
             <Link href={'/contact'}><li>Contact</li></Link>
             <Link href={'/enroll'}><li>Enroll</li></Link>
+            <Link href={'/exercises'}><li>Exercises</li></Link>
           </ul>
         </div>
 

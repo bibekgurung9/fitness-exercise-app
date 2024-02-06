@@ -52,8 +52,8 @@ const ExerciseCategory = () => {
   return (
     <div className='grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-5 gap-y-8 gap-x-8 my-6'>
       {exerciseCategory.map((category) => (
-      <Link href={``} onClick={(e) => { setSearch(category.title.toString()); onSearch(e); }}>
-        <Card key={category.id} className='w-full'>
+      <Link href={``} onClick={(e) => { setSearch(category.title.toString()); onSearch(e); }} key={category.id}>
+        <Card  className='w-full'>
           <CardTitle className=''>
             <CardHeader>
               <CardContent className='flex'>

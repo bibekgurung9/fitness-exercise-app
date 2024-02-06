@@ -12,16 +12,16 @@ export const chooseList = [
     description: `Our certified fitness trainers bring years of experience to guide you on your fitness journey.`,
   },
   {
-    title: '✅ Expert Guidance',
-    description: `Our certified fitness trainers bring years of experience to guide you on your fitness journey.`,
+    title: '✅ Varied Workouts',
+    description: `Enjoy a diverse range of workouts, from high-intensity training to calming yoga sessions, ensuring you find the perfect fit for your preferences.`,
   },
   {
-    title: '✅ Expert Guidance',
-    description: `Our certified fitness trainers bring years of experience to guide you on your fitness journey.`,
+    title: '✅ Community Support',
+    description: `Connect with like-minded individuals through our community forums, sharing successes, challenges, and motivation to keep you on track.`,
   },
   {
-    title: '✅ Expert Guidance',
-    description: `Our certified fitness trainers bring years of experience to guide you on your fitness journey.`,
+    title: '✅ State-of-the-Art Technology',
+    description: `Access cutting-edge fitness tracking tools and analytics to monitor your progress and adjust your routines for optimal results.`,
   }
 ]
 
@@ -64,6 +64,40 @@ export const featureList = [
 
   */
 ];
+
+import dummy1 from '@/assets/images/1.jpg'
+import dummy2 from '@/assets/images/2.jpg'
+import dummy3 from '@/assets/images/3.jpg'
+export const dummyBlogs = [
+  { 
+    title: `"Unlock Your Potential: A Beginner's Guide to Starting a Fitness Journey"`, 
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quas veniam consectetur sit assumenda! Ea sapiente blanditiis ullam ad soluta iure vitae, saepe illum, accusamus nihil illo ipsa quas quidem?', 
+    src: dummy1},
+  { 
+    title: ` "5 Quick and Effective Home Workouts for Busy Professionals"`, 
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quas veniam consectetur sit assumenda! Ea sapiente blanditiis ullam ad soluta iure vitae, saepe illum, accusamus nihil illo ipsa quas quidem?', 
+    src: dummy2},
+  { 
+    title: `"Fueling Your Fitness: A Nutritional Roadmap for Active Living"`, 
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quas veniam consectetur sit assumenda! Ea sapiente blanditiis ullam ad soluta iure vitae, saepe illum, accusamus nihil illo ipsa quas quidem?', 
+    src: dummy3},
+  { 
+    title: `"Mindful Movement: Incorporating Yoga into Your Fitness Routine"`, 
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quas veniam consectetur sit assumenda! Ea sapiente blanditiis ullam ad soluta iure vitae, saepe illum, accusamus nihil illo ipsa quas quidem?', 
+    src: dummy1},
+  { 
+    title: `"The Science of Strength Training: Building Muscles the Right Way"`, 
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quas veniam consectetur sit assumenda! Ea sapiente blanditiis ullam ad soluta iure vitae, saepe illum, accusamus nihil illo ipsa quas quidem?', 
+    src: dummy2},
+  { 
+    title: `"Healthy Habits: Transforming Your Lifestyle for Long-Term Fitness"`, 
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quas veniam consectetur sit assumenda! Ea sapiente blanditiis ullam ad soluta iure vitae, saepe illum, accusamus nihil illo ipsa quas quidem?', 
+    src: dummy3},
+  
+
+]
+
+
 
 export const availablePrograms = [
   { name: 'Full Body'},
