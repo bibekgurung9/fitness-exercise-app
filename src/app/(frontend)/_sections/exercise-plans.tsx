@@ -22,44 +22,58 @@ interface ExerciseCard {
 }
 
 const ExercisePlans = () => {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const [ plans, setPlans ] = useState<ExerciseCard[]>([]);
 
   useEffect(() => {
-    const onPlans = async () => {
-      if(plans){
-        const plansData = await axios.get(
+    const fetchPlans = async () => {
+      try {
+        const response = await axios.get(
           `https://exercisedb.p.rapidapi.com/exercises`,
           exerciseOptions
         );
-  
-        const searchedPlans = plansData.data.filter(
-          (plan: ExerciseCard) => plan.name.toLowerCase()
-          || plan.target.toLowerCase()
-          || plan.equipment.toLowerCase()
-          || plan.bodyPart.toLowerCase()
+
+        const searchedPlans = response.data.filter(
+          (plan: ExerciseCard) =>
+            plan.name.toLowerCase() ||
+            plan.target.toLowerCase() ||
+            plan.equipment.toLowerCase() ||
+            plan.bodyPart.toLowerCase()
         );
+
         setPlans(searchedPlans);
-        console.log(searchedPlans)
+        setLoading(false);
+        setError(false);
+      } catch (error) {
+        console.error('Error fetching exercise plans:', error);
+        setLoading(false);
+        setError(true);
       }
-    }
-    onPlans();
-  }, [plans])
+    };
+
+    fetchPlans();
+  }, []);
 
   return (
-    <div className='h-full grid sm:grid-cols-2 md:grid-cols-4 gap-x-6  items-center gap-y-6'>
-      {plans.map((exercise) => (
-        <Card key={exercise.id} className='flex flex-col h-full hover:shadow-2xl'>
-          <Button className='mx-2 mt-4' size='xs' variant='tag1'>{exercise.name.toUpperCase()}</Button>
-          <Button className='mx-2 mt-4' size='xs' variant='tag2'>Targets: {exercise.bodyPart.toUpperCase()}</Button>
-          <Image src={exercise.gifUrl} alt="" loading='lazy'/>
-          <Link href={`/exercise/${exercise.id}`}>
-            <Button className='mx-2 mb-4 text-xl' variant='tag3'>
-              <BiBulb />
-              Learn More...
-            </Button>
-          </Link>
-        </Card>
-      ))}
+<div>
+      {loading ? (
+        <p>Loading...</p>
+      ) : error ? (
+        <p className='text-orange-500 text-xl mb-4 font-bold'>Failed to fetch exercise plans. Please try again later.</p>
+      ) : (
+        <div>
+          <h1 className='text-orange-500 text-2xl md:text-4xl mb-4 font-bold'>Our Most Favourite Picks</h1>
+
+          <div className='h-full grid sm:grid-cols-2 md:grid-cols-4 gap-x-6 items-center gap-y-6'>
+            {plans.map((exercise) => (
+              <Card key={exercise.id} className='flex flex-col h-full hover:shadow-2xl'>
+                {/* ... (rest of your component code) */}
+              </Card>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   )
 }
