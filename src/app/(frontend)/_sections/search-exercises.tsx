@@ -25,6 +25,7 @@ export const SearchExercise = () => {
 
   const onSearch = async (e:any) => {
     e.preventDefault();
+    alert("Exercises Here May Not Load beacause I ran out of free monthly requests from RapidAPI: ExerciseDB. Please feel free to check out later at a later date")
     if(search){
       const exercisesData = await axios.get(
         `https://exercisedb.p.rapidapi.com/exercises`,
@@ -51,13 +52,15 @@ export const SearchExercise = () => {
 
   return (
     <section className='my-4 text-center flex flex-col'>
-      <div className="flex w-full items-center justify-center px-16 gap-8 mb-6">
+      <h1 className='text-4xl font-bold mb-4'>Search For Awesome Exercises: </h1>
+      <div className='flex flex-col md:flex-row items-center md:justify-between w-full md:w-1/2 mx-auto px-4 md:px-0 mb-6 gap-y-4 gap-x-4'>
         <Input 
           type="text" 
           placeholder="Search for exercises...." 
           value={search}
           onChange={(e) => setSearch(e.target.value) }
           onKeyDown={handleKeyDown}
+          className='outline '
           />
         <Button type="button" variant='tag3' onClick={onSearch}>Search</Button>
       </div>

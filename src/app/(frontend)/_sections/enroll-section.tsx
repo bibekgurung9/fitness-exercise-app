@@ -15,6 +15,17 @@ const EnrollForm = () => {
 
   const enrollForm = (e:any) => {
   e.preventDefault();
+  
+  if (
+    !formData.name ||
+    !formData.email ||
+    !formData.phoneNumber ||
+    formData.program.length
+  ) {
+    toast.error("Please fill in all the required fields");
+    return;
+  }
+
   toast.success("DEMO MESSAGE SUCCESS!");
   console.log(formData);
   setFormData({

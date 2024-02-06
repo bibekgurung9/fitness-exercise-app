@@ -15,6 +15,12 @@ const ContactUs = () => {
 
   const submitForm = (e:any) => {
   e.preventDefault();
+
+  if (!formData.name || !formData.email || !formData.phoneNumber || !formData.message) {
+    toast.error("Please fill in all the fields");
+    return;
+  }
+
   toast.success("DEMO MESSAGE SUCCESS!");
   console.log(formData);
   setFormData({
