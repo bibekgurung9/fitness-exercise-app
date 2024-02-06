@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import ExerciseDetailPage from '../_components/exercise-details';
-import axios, { AxiosResponse } from 'axios';
-import { exerciseOptions, youtubeOptions } from '@/utils/getData';
-import ExerciseVideos from '../_components/exercise-video';
+import axios from 'axios';
+import { exerciseOptions } from '@/utils/getData';
+import SimilarExercises from '../_components/similar-exercises';
 
 export interface ExerciseId {
   bodyPart: string;
@@ -19,7 +19,7 @@ export interface ExerciseId {
 
 const ExerciseId = () => {
   const [exerciseId, setExerciseId] = useState<ExerciseId | undefined>();
-  const [ exerciseVideos, setExerciseVideos] = useState([]);
+  //const [ exerciseVideos, setExerciseVideos] = useState([]);
   const params = useParams<{ exerciseId: string }>();
 
   useEffect(() => {
@@ -58,6 +58,7 @@ const ExerciseId = () => {
     <div>
       {exerciseId && <ExerciseDetailPage exerciseId={exerciseId} />}
       {/* {exerciseId && <ExerciseVideos exerciseVideos={exerciseVideos} exerciseName={exerciseId.name}  />} */}
+      {exerciseId && <SimilarExercises exerciseId={exerciseId} />}
     </div>
   );
 };

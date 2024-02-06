@@ -19,7 +19,7 @@ export interface Exercise {
   instructions: string[];
 }
 
-const SearchExercise = () => {
+export const SearchExercise = () => {
   const [ search, setSearch ] = useState("");
   const [ exercises, setExercises ] = useState<Exercise[]>([]);
 
