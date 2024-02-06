@@ -10,6 +10,7 @@ import { Menu } from "lucide-react";
 import { navLinks } from '@/constants';
 import Link from 'next/link';
 import { X } from 'lucide-react';
+import { ModeToggle } from './mode-toggle';
 
 const MobileNavbar = () => {
   return (
@@ -30,9 +31,9 @@ const MobileNavbar = () => {
               </Link>
             </div>
             ))}
+            <ModeToggle />
         </SheetContent>
         </Sheet>
-      Search
     </div>
   )
 }
