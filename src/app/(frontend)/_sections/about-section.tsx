@@ -36,7 +36,7 @@ const HeroSection = () => {
         <div className='flex flex-col mt-4 p-4'>
           <h1 className='text-3xl font-extrabold mt-4 mb-4'>What Sets Us Apart: </h1>
           <ul className='text-xl flex flex-col justify-start gap-y-2'>
-            <li><span className='font-bold'>1. Personalized Approach:</span> We don&#39t believe in one-size-fits-all solutions. Our programs are tailored to your individual fitness level, goals, and preferences.</li>
+            <li><span className='font-bold'>1. Personalized Approach:</span> We don{'\u0027'}t believe in one-size-fits-all solutions. Our programs are tailored to your individual fitness level, goals, and preferences.</li>
             <li><span className='font-bold'>2. Expert Guidance:</span> Our team of certified trainers brings a wealth of experience to ensure you receive the best guidance on your fitness journey.</li>
             <li><span className='font-bold'>3. Comprehensive Wellness:</span> We focus not only on physical fitness but also on mental and emotional well-being. Our programs are designed to nourish your mind, body, and soul.</li>
           </ul>
@@ -61,12 +61,12 @@ const HeroSection = () => {
       <div className='flex flex-col mt-4 p-4'>
         <h1 className='text-3xl font-extrabold mt-4 mb-4'>What We Believe In: </h1>
         <ul className='text-xl flex flex-col justify-start gap-y-2'>
-          <li><span className='font-bold'>Supportive Community:</span> oin our community of like-minded individuals who share a commitment to health and fitness. Connect with others, share your progress, and find inspiration in the journey of fellow members.</li>
+          <li><span className='font-bold'>Supportive Community:</span> Join our community of like-minded individuals who share a commitment to health and fitness. Connect with others, share your progress, and find inspiration in the journey of fellow members.</li>
           <li><span className='font-bold'>Continuous Learning:</span> We stay abreast of the latest fitness trends, research, and best practices to ensure our programs evolve with the ever-changing landscape of health and wellness.</li>
           <li><span className='font-bold'>Fun and Enjoyable Workouts: </span> We focus not only on physical fitness but also on mental and emotional well-being. Our programs are designed to nourish your mind, body, and soul.</li>
         </ul>
 
-        <p className='text-3xl mb-6 mt-4 font-bold'>Thank you for choosing<span className='text-orange-400'> Fitness Nepal!</span> as your fitness partner. We look forward to accompanying you on your journey to a healthier and more vibrant life!</p>
+        <p className='text-3xl mb-6 mt-8 font-bold'>Thank you for choosing<span className='text-orange-400'> Fitness Nepal!</span> as your fitness partner. We look forward to accompanying you on your journey to a healthier and more vibrant life!</p>
       </div>
     </div>
   )
