@@ -69,7 +69,7 @@ export default function Footer(){
         </div>
       </div>
       
-      <p className="text-center mt-4 text-xl">This Project Was Made My <a href="www.github.com/bibekgurung9" className="text-orange-500 font-bold hover:text-orange-500/80" target="blank">Bibek Gurung</a></p>
+      <p className="text-center mt-4 text-xl">This Project Was Made My <a href="https://github.com/bibekgurung9" className="text-orange-500 font-bold hover:text-orange-500/80" target="blank">Bibek Gurung</a></p>
     </footer>
   )
 }
